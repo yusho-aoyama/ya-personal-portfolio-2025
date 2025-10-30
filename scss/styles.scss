@@ -1,0 +1,492 @@
+// • Nesting 　*
+// • Comments  *
+// • Mixins *
+// • Mixins with arguments *
+// • Partials  *
+// • Variables *
+// • @include *
+// • @extend *
+// • @import *
+// • Placeholders *
+// • @each 
+// • @if *
+// • functions *
+
+@use 'mixins';
+@use 'variables';
+@use 'functions';
+
+
+// --------------------------------------------------------
+// ------------------- Placeholders -----------------------
+// --------------------------------------------------------
+
+// Placeholder for a hover navigation
+%hover-white {
+    // The "&" symbol refers to the parent selector in SCSS.
+    &:hover {
+        color: variables.$white-color;
+    }
+}
+
+// Placeholder for a button animiation
+%btn-animation {
+    transition: left 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+// ---------------------------------------------------------
+
+@import 'reset';
+
+body {
+    background-color: variables.$background-color;
+    color: variables.$white-color;
+}
+
+.wrapper {
+    @include mixins.wrapper;
+}
+
+// --- header & nav ---
+header {
+    width: auto;
+    padding-top: functions.rem(20);
+    padding-bottom: functions.rem(40);
+}
+
+nav {
+    @include mixins.flex(space-between, center);
+    // Nesting
+    .logo {
+        font-weight: 700;
+        text-transform: uppercase;
+        color: variables.$light-grey-color;
+        @include mixins.text-style();
+
+        // hover text-style
+        @extend %hover-white;
+    }
+
+    // Nesting
+    ul {
+        @include mixins.flex(center, center);
+        gap: 1.5rem;
+        list-style: none;
+    }
+
+    // Nesting
+    li a {
+        @include mixins.text-style();
+        color: variables.$light-grey-color;
+
+        // hover text-style
+        @extend %hover-white;
+    }
+}
+
+// --- Hamburger Menu ---
+.menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    color: variables.$white-color;
+    cursor: pointer;
+}
+
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    left: -100%; 
+    width: 100%;
+    height: 100%;
+
+    background-color: variables.$background-color;
+    color: variables.$white-color;
+    @include mixins.flex(center, center, column);
+
+    transition: left 0.3s ease-in-out;
+    z-index: 999;
+
+    &.active {
+        left: 0;
+    }
+
+    // Nesting
+    .close-btn {
+        position: absolute;
+        top: functions.rem(20);
+        right: functions.rem(20);
+        background: none;
+        border: none;
+        color: variables.$white-color;
+        cursor: pointer;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+        margin-top: functions.rem(50);
+        text-align: center;
+
+        li {
+            margin: functions.rem(20) 0;
+
+            a {
+            font-size: 2rem;
+            color: variables.$light-grey-color;
+            text-decoration: none;
+
+            &:hover {
+                color: variables.$white-color;
+                }
+            }
+        }
+    }
+}
+
+// --- Home ---
+.home-wrapper {
+    padding-top: functions.rem(16);
+    padding-bottom: functions.rem(20);
+    @include mixins.flex(null, center, row);
+    gap: 2.5rem;
+}
+
+.profile-detail {
+    display: flex;
+    margin-top: 1rem;
+}
+
+.address {
+    width: 100%;
+    a {
+        @include mixins.text-style(1.25rem, 2rem, 0);
+        color: variables.$light-grey-color;
+    }
+}
+
+.social-links {
+    width: 100%;
+    @include mixins.flex(flex-end, center, row);
+    gap: 1.25rem;
+    a {
+        @include mixins.flex(null, center, row);
+        gap: 0.25rem;
+        @include mixins.text-style(1rem, 1rem, 0);
+        color: variables.$light-grey-color;
+    }
+}
+
+// --- Skills ---
+.tech-stack,
+.technical-skills,
+.soft-skills {
+    // display: flex;
+    // flex-direction: column;
+    @include mixins.flex(stretch, stretch, column);
+    margin-top: functions.rem(20);
+    margin-bottom: functions.rem(80);
+    // h2 {
+    //     @include mixins.text-style();
+    //     font-weight: bold;
+    //     text-transform: uppercase;
+    //     margin-bottom: functions.rem(40);
+    // }
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1.25rem; 
+    color: variables.$white-color;
+}
+
+.skill-btn {
+    @extend %btn-animation;
+    border: 1px solid rgba(variables.$light-grey-color, 0.5);
+    background-color: transparent;
+    height: functions.rem(96);
+    border-radius: functions.rem(8);
+    padding: functions.rem(12);
+    font-size: 1rem;
+
+    @include mixins.flex(center, center, column);
+    gap: functions.rem(6);
+    color: variables.$white-color;
+
+    // @extend %hover-white-bg;
+    // @extend %hover-img-lift;
+
+    //Nesting
+    // img {
+    //     transition: transform 0.3s;
+    // }
+    // &:hover {
+    //     background-color: rgba(211, 211, 211, 0.1);
+    //     color: #fff;
+    //         img {
+    //             transform: translateY(-0.25rem);
+    //         };
+    // }
+    // p {
+    //     font-size: 1rem;
+    // }
+}
+.skill-btn:hover {
+    background-color: rgba(211, 211, 211, 0.1);
+    color: #fff;
+}
+
+.skill-btn img {
+    transition: transform 0.3s;
+}
+
+.skill-btn:hover img {
+    transform: translateY(-0.25rem);
+}
+
+
+// --- Education ---
+.education {
+    width: 100%;
+    @include mixins.flex(stretch, stretch, column);
+    // h2 {
+    //     @include mixins.text-style();
+    //     font-weight: bold;
+    //     text-transform: uppercase;
+    //     margin-bottom: functions.rem(40);
+    // }
+}
+
+.edu-container {
+    width: 100%;
+    @include mixins.flex(stretch, stretch, column);
+    gap: 3.5rem;
+}
+
+.edu-detail {
+    width: 100%;
+    display: flex;                
+    gap: 2.5rem;
+}
+
+.date {
+    color: variables.$light-grey-color;
+    white-space: nowrap;
+}
+
+.course-title {
+    color: variables.$white-color;
+    font-size: 1.125rem; 
+    font-weight: bold;
+}
+
+.edu-institution {
+    color: variables.$light-grey-color; 
+    margin-bottom: functions.rem(16);
+}
+
+.edu-description {
+    color: variables.$light-grey-color; 
+}
+
+// --- Projects ---
+.projects {
+    width: 100%;
+    @include mixins.flex(stretch, stretch, column);
+    margin-top: functions.rem(96);
+}
+
+#projects {
+    font-weight: 700;  
+    color: variables.$white-color;
+    @include mixins.text-style();
+    text-transform: uppercase; 
+    margin-bottom: 2.5rem;
+}
+
+.project-card {
+    max-width: 640px;               
+    margin: 0 auto 4rem auto;
+    border-radius: 0.5rem;      
+    border: 1px solid rgba(211,211,211,0.5); 
+    padding: 1.25rem; 
+    @include mixins.flex(stretch, stretch, column);
+    gap: 1.25rem;
+    a {
+        margin: 0 auto;
+        img {
+            width: 100%;
+            border-radius: 0.375rem; 
+            object-fit: cover;
+        }
+    }
+}
+
+.project-detail {
+    @include mixins.flex(stretch, stretch, column);
+}
+
+.project-title {
+    font-weight: 600;           
+    color: variables.$white-color;             
+    @include mixins.text-style();
+}
+
+.project-description {
+    color: variables.$light-grey-color;             
+    margin-top: 0.75rem;
+}
+
+.tech-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr)); 
+    align-items: center;         
+    gap: 0.5rem;                 
+    margin-top: 1.25rem;
+}
+
+.tech-icon {
+    height: functions.rem(24);
+    @include mixins.flex();
+    gap: 0.375rem;
+    padding: 0 1rem;
+    border-radius: functions.rem(9999);
+    font-size: 0.8rem;
+    img {
+        width: functions.rem(18);
+        height: functions.rem(18);
+    }
+}
+
+.project-links {
+    width: 100%;
+    @include mixins.flex(stretch, center, row);
+    gap: 0.5rem;
+    margin-top: 2rem;
+}
+
+.project-link {
+    width: 33.333%;
+    background-color: rgba(211,211,211,0.1);
+    font-size: 0.75rem;          
+    transition: all 0.3s ease;   
+    border-radius: 9999px; 
+    font-weight: 700; 
+    padding: 0.5rem 1rem; 
+    color: variables.$white-color;
+    @include mixins.flex();       
+    gap: 0.5rem;
+    &:hover {
+        background-color: rgba(211,211,211,0.2);
+    }
+}
+
+// --- Contact ---
+#contact {
+    width: 100%;
+    @include mixins.flex(stretch, center, row);
+    padding: 1.5rem 0 0.25rem 0;
+    margin-top: 1.25rem;
+    border-top: 1px solid rgba(211, 211, 211, 0.2); 
+    div {
+        color: variables.$light-grey-color;
+        @include mixins.flex(stretch, center, row);
+        gap: 0.5rem;
+        transition: color 0.3s ease;
+        &:hover {
+            color: variables.$white-color;
+        }
+    }
+    svg {
+        width: functions.rem(20);
+        height: functions.rem(20);
+        fill: currentColor;
+        stroke: none;
+    }
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+}
+
+// ------------------------------------
+// Lecturer's example in Session 3
+// Apply italics to h1-h2 using @each
+// $headings: h1, h2, h3;
+
+// @each $h in $headings {
+//     #{$h} {
+//         font-style: italic;
+//     }
+// }
+// ------------------------------------
+
+// Apply typography to h2 using @each
+// Reference: https://dev.to/colewalker/scss-lists-and-each-5dgb
+$areas: '.tech-stack', '.technical-skills', '.soft-skills', '.education', '#projects';
+
+@each $section in $areas {
+    #{$section} {
+        h2 {
+            @include mixins.text-style();
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-bottom: functions.rem(40);
+        }
+    }
+}
+
+
+
+
+// --- Responsive Design for Mobile ---
+@include mixins.respond(lg) {
+    .nav-links {
+        display: none;
+    }
+    .menu-btn {
+        display: block;
+    }
+    .home-wrapper {
+        flex-direction: column; 
+        text-align: center;
+    }
+    .profile-detail {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .social-links {
+        justify-content: center;
+    }
+
+    /* --- skills --- */
+    .skills-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+// @media (max-width: 640px) {
+@include mixins.respond(md) {
+    .skills-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .tech-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .project-links {
+        flex-direction: column;
+
+    }
+}
+
+// @media (max-width: 500px) {
+@include mixins.respond(sm) {
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .tech-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

@@ -1,0 +1,49 @@
+// A mixin is reusable code that you can apply using @include
+
+// Mixin for reset
+// @mixin reset {
+//     margin: 0;
+//     padding: 0;
+//     box-sizing: border-box;
+//     font-family: 'Roboto', sans-serif;
+//     text-decoration: none;
+// }
+
+// Mixin for wrapper
+@mixin wrapper($max-width:47.5rem, $padding:2rem) {
+    max-width: $max-width;
+    margin: 0 auto;
+    padding: $padding;
+}
+
+// Mixin for Flexbox
+@mixin flex($justify:center, $align:center, $direction:row) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $direction;
+}
+
+// Mixin for Typography
+@mixin text-style($size: 1.125rem, $line: 1.75rem, $spacing: 0.1em) {
+    font-size: $size;
+    line-height: $line;
+    letter-spacing: $spacing;
+}
+
+// Mixins for Responsive Design
+@mixin respond($breakpoint) {
+    @if ($breakpoint == lg) {
+        @media (max-width: 768px) {
+            @content;
+        }
+    } @else if ($breakpoint == md) {
+        @media (max-width: 640px) {
+            @content;
+        }
+    } @else if ($breakpoint == sm) {
+        @media (max-width: 500px) {
+            @content;
+        }
+    }
+}

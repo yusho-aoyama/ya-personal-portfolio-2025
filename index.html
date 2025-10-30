@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="scss/styles.css">
+    <title>Yusho Aoyama</title>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <nav>
+                <a href="#" class="logo">Yusho Aoyama</a>
+                <ul class="nav-links">
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+
+                <!-- Hamburger Button (Visible on Mobile) -->
+                <button class="menu-btn">
+                <!-- SVG Hamburger Icon -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 6h16"></path>
+                    <path d="M4 12h16"></path>
+                    <path d="M4 18h16"></path>
+                </svg>
+                </button>
+            </nav>
+
+            <!-- Mobile Menu (Initially Hidden) -->
+            <div class="mobile-menu">
+                <button class="close-btn">
+                    <!-- Close Icon -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M18 6L6 18"></path>
+                        <path d="M6 6l12 12"></path>
+                    </svg>
+                </button>
+                <ul>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </header>
+
+
+        <main>
+            <div id="home" class="home">
+                <div class="home-wrapper">
+                    <img src="images/Sample-profile.jpg" alt="Profile_image">
+                    <div class="profile">
+                        <h1><span>Hi, I'm Yusho.</span><br> I'm Web Development Student.</h1>
+                        
+                        <div class="profile-detail">
+                            <div class="address">
+                                <a href="#">🏠 Yokine, WA</a>
+                            </div>
+                            <div class="social-links">
+                                <a href="#">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 256 256"><g fill="none"><rect width="256" height="256" fill="#fff" rx="60"/><rect width="256" height="256" fill="#0A66C2" rx="60"/><path fill="#fff" d="M184.715 217.685h29.27a4 4 0 0 0 4-3.999l.015-61.842c0-32.323-6.965-57.168-44.738-57.168c-14.359-.534-27.9 6.868-35.207 19.228a.32.32 0 0 1-.595-.161V101.66a4 4 0 0 0-4-4h-27.777a4 4 0 0 0-4 4v112.02a4 4 0 0 0 4 4h29.268a4 4 0 0 0 4-4v-55.373c0-15.657 2.97-30.82 22.381-30.82c19.135 0 19.383 17.916 19.383 31.834v54.364a4 4 0 0 0 4 4ZM38 59.627c0 11.865 9.767 21.627 21.632 21.627c11.862-.001 21.623-9.769 21.623-21.631C81.253 47.761 71.491 38 59.628 38C47.762 38 38 47.763 38 59.627Zm6.959 158.058h29.307a4 4 0 0 0 4-4V101.66a4 4 0 0 0-4-4H44.959a4 4 0 0 0-4 4v112.025a4 4 0 0 0 4 4Z"/></g></svg>
+                                    LinkedIn</a>
+                                <a href="#">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 20 20"><path fill="currentColor" d="M20 10.25c0 2.234-.636 4.243-1.908 6.027c-1.271 1.784-2.914 3.018-4.928 3.703c-.234.045-.406.014-.514-.093a.539.539 0 0 1-.163-.4V16.67c0-.863-.226-1.495-.677-1.895a8.72 8.72 0 0 0 1.335-.24c.394-.107.802-.28 1.223-.52a3.66 3.66 0 0 0 1.055-.888c.282-.352.512-.819.69-1.402c.178-.583.267-1.252.267-2.008c0-1.077-.343-1.994-1.028-2.75c.32-.81.286-1.717-.105-2.723c-.243-.08-.594-.03-1.054.147a6.94 6.94 0 0 0-1.198.587l-.495.32a9.03 9.03 0 0 0-2.5-.346a9.03 9.03 0 0 0-2.5.347a11.52 11.52 0 0 0-.553-.36c-.23-.143-.593-.314-1.088-.514c-.494-.2-.868-.26-1.12-.18c-.381 1.005-.412 1.912-.09 2.722c-.686.756-1.03 1.673-1.03 2.75c0 .756.09 1.423.268 2.002c.178.578.406 1.045.683 1.401a3.53 3.53 0 0 0 1.048.894c.421.24.83.414 1.224.52c.395.108.84.188 1.335.241c-.347.32-.56.779-.638 1.375a2.539 2.539 0 0 1-.586.2a3.597 3.597 0 0 1-.742.067c-.287 0-.57-.096-.853-.287c-.282-.192-.523-.47-.723-.834a2.133 2.133 0 0 0-.631-.694c-.256-.178-.471-.285-.645-.32l-.26-.04c-.182 0-.308.02-.378.06c-.07.04-.09.09-.065.153a.738.738 0 0 0 .117.187a.961.961 0 0 0 .17.16l.09.066c.192.09.38.259.567.508c.187.249.324.476.41.68l.13.307c.113.338.304.612.574.821c.269.21.56.343.872.4c.312.058.614.09.905.094c.29.004.532-.011.723-.047l.299-.053c0 .338.002.734.007 1.188l.006.72c0 .16-.056.294-.17.4c-.112.108-.286.139-.52.094c-2.014-.685-3.657-1.92-4.928-3.703C.636 14.493 0 12.484 0 10.25c0-1.86.447-3.574 1.341-5.145a10.083 10.083 0 0 1 3.64-3.73A9.6 9.6 0 0 1 10 0a9.6 9.6 0 0 1 5.02 1.375a10.083 10.083 0 0 1 3.639 3.73C19.553 6.675 20 8.391 20 10.25Z"/></svg>
+                                    GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="skills">
+                <div class="tech-stack">
+                    <h2>TECH STACK</h2>
+                    <div class="skills-grid">
+                        <button class="skill-btn">
+                            <img src="images/Sample-icon.jpg" alt="#">
+                            HTML
+                        </button>
+                        <button class="skill-btn">
+                            <img src="images/Sample-icon.jpg" alt="#">
+                            CSS
+                        </button>
+                        <button class="skill-btn">
+                            <img src="images/Sample-icon.jpg" alt="#">
+                            JavaScript
+                        </button>
+                        <button class="skill-btn">
+                            <img src="images/Sample-icon.jpg" alt="#">
+                            Python
+                        </button>
+                        <button class="skill-btn">
+                            <img src="images/Sample-icon.jpg" alt="#">
+                            PHP
+                        </button>
+                        <button class="skill-btn">
+                            <img src="images/Sample-icon.jpg" alt="#">
+                            Java
+                        </button>
+                        <button class="skill-btn">
+                            <img src="images/Sample-icon.jpg" alt="#">
+                            Laravel
+                        </button>
+                        <button class="skill-btn">
+                            <img src="images/Sample-icon.jpg" alt="#">
+                            Tailwind CSS
+                        </button>
+                        <button class="skill-btn">
+                            <img src="images/Sample-icon.jpg" alt="#">
+                            Bootstrap
+                        </button>
+                        <button class="skill-btn">
+                            <img src="images/Sample-icon.jpg" alt="#">
+                            SQL
+                        </button>
+                    </div>
+                </div>
+                <div class="technical-skills">
+                    <h2>Technical Skills</h2>
+                    <div class="skills-grid">
+                        <button class="skill-btn">
+                            <img src="images/Sample-icon.jpg" alt="#">
+                            OOP
+                        </button>
+                        <button class="skill-btn">
+                            <img src="images/Sample-icon.jpg" alt="#">
+                            Version Control
+                        </button>
+                        <button class="skill-btn">
+                            <img src="images/Sample-icon.jpg" alt="#">
+                            Project Management
+                        </button>
+                        <button class="skill-btn">
+                            <img src="images/Sample-icon.jpg" alt="#">
+                            Database Design
+                        </button>
+                        <button class="skill-btn">
+                            <img src="images/Sample-icon.jpg" alt="#">
+                            SEO
+                        </button>
+                    </div>
+                </div>
+                <div class="soft-skills">
+                    <h2>Soft Skills</h2>
+                    <div class="skills-grid">
+                        <button class="skill-btn">
+                            <img src="images/Sample-icon.jpg" alt="#">
+                            Collaboration
+                        </button>
+                        <button class="skill-btn">
+                            <img src="images/Sample-icon.jpg" alt="#">
+                            Patience
+                        </button>
+                        <button class="skill-btn">
+                            <img src="images/Sample-icon.jpg" alt="#">
+                            Time management
+                        </button>
+                        <button class="skill-btn">
+                            <img src="images/Sample-icon.jpg" alt="#">
+                            Problem-solving
+                        </button>
+                        <button class="skill-btn">
+                            <img src="images/Sample-icon.jpg" alt="#">
+                            IT Customer Support
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div id="education" class="education">
+                <h2>Education</h2>
+                <div class="edu-container">
+                    <div class="edu-detail">
+                        <p class="date">7.2025 - Present</p>
+                        <div class="course">
+                            <p class="course-title">Diploma of Information Technology (Back End Web Development)</p>
+                            <p class="edu-institution">North Metroplitan TAFE</p>
+                            <p class="edu-description">Studying backend and full-stack development, including database design, cloud applications, web app development, and frameworks. Gaining skills in Python, C#, PHP, SQL, HTML5, CSS3, and using tools like WordPress and SASS. Involved in real client projects focusing on problem-solving, teamwork, and project management.</p>
+                            <!-- <p>Focused on full life-cycle development of commercially ready websites and web applications. The program covers database design, cloud application development, information architecture, big data, machine learning, and backend web app development. Developed advanced programming skills in Python, C#, PHP, SQL, along with front-end technologies (HTML5, CSS3, responsive design).
+                            Gained experience with frameworks, WordPress, SASS, and applied project management techniques to real client projects. Strengthened problem-solving, research, and communication skills through collaborative work and client engagement.</p> -->
+                        </div>
+                    </div>
+                    <div class="edu-detail">
+                        <p class="date">2.2025 - 5.2025</p>
+                        <div class="course">
+                            <p class="course-title">Google IT Support Professional Certificate</p>
+                            <p class="edu-institution">Coursera</p>
+                            <p class="edu-description">Gained foundational IT skills for entry-level support roles, including troubleshooting, networking (TCP/IP, DNS), Linux and Windows OS management, system administration, and IT security. Hands-on experience with CLI, cloud infrastructure, Active Directory, and encryption technologies.</p>
+                        </div>
+                    </div>
+                    <div class="edu-detail">
+                        <p class="date">7.2024 - 7.2025</p>
+                        <div class="course">
+                            <p class="course-title">Certificate IV in Information Technology (Web Development)</p>
+                            <p class="edu-institution">North Metroplitan TAFE</p>
+                            <p class="edu-description">Studied front-end and back-end web development, covering HTML5, CSS3, JavaScript, PHP, and MySQL. Gained skills in UX/UI design, responsive layouts, SEO, accessibility, and web security. Completed projects involving dynamic websites, database integration, client-side scripting, and cybersecurity practices.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="projects">
+                <h2 id="projects">Projects</h2>
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <a href="#" aria-label="See more about this project">
+                        <img src="images/Sample-thumbnail.jpg" alt="Thumbnail_of_project">
+                    </a>
+                    <div class="project-detail">
+                        <p class="project-title">Project1</p>
+                        <p class="project-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, error iure quam fugiat corporis amet libero! Et minima odit pariatur officiis porro optio esse, ullam fuga facilis quam iste ut!</p>
+                        <div class="tech-grid">
+                            <div class="tech-icon">
+                                <img src="images/Sample-icon.jpg" alt="#">
+                                <p>Skill 1</p>
+                            </div>
+                            <div class="tech-icon">
+                                <img src="images/Sample-icon.jpg" alt="#">
+                                <p>Skill 2</p>
+                            </div>
+                            <div class="tech-icon">
+                                <img src="images/Sample-icon.jpg" alt="#">
+                                <p>Skill 3</p>
+                            </div>
+                            <div class="tech-icon">
+                                <img src="images/Sample-icon.jpg" alt="#">
+                                <p>Skill 4</p>
+                            </div> 
+                            <div class="tech-icon">
+                                <img src="images/Sample-icon.jpg" alt="#">
+                                <p>Skill 5</p>
+                            </div>
+                            <div class="tech-icon">
+                                <img src="images/Sample-icon.jpg" alt="#">
+                                <p>Skill 6</p>
+                            </div>
+                            <div class="tech-icon">
+                                <img src="images/Sample-icon.jpg" alt="#">
+                                <p>Skill 7</p>
+                            </div>
+                            <div class="tech-icon">
+                                <img src="images/Sample-icon.jpg" alt="#">
+                                <p>Skill 8</p>
+                            </div>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">Source Code</a>
+                            <a href="#" class="project-link">Live Demo</a>
+                            <a href="#" class="project-link">Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <a href="#" aria-label="See more about this project">
+                        <img src="images/Sample-thumbnail.jpg" alt="Thumbnail_of_project">
+                    </a>
+                    <div class="project-detail">
+                        <p class="project-title">Project2</p>
+                        <p class="project-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, error iure quam fugiat corporis amet libero! Et minima odit pariatur officiis porro optio esse, ullam fuga facilis quam iste ut!</p>
+                        <div class="tech-grid">
+                            <div class="tech-icon">
+                                <img src="images/Sample-icon.jpg" alt="#">
+                                <p>Skill 1</p>
+                            </div>
+                            <div class="tech-icon">
+                                <img src="images/Sample-icon.jpg" alt="#">
+                                <p>Skill 2</p>
+                            </div>
+                            <div class="tech-icon">
+                                <img src="images/Sample-icon.jpg" alt="#">
+                                <p>Skill 3</p>
+                            </div>
+                            <div class="tech-icon">
+                                <img src="images/Sample-icon.jpg" alt="#">
+                                <p>Skill 4</p>
+                            </div>
+                            <div class="tech-icon">
+                                <img src="images/Sample-icon.jpg" alt="#">
+                                <p>Skill 5</p>
+                            </div>
+                            <div class="tech-icon">
+                                <img src="images/Sample-icon.jpg" alt="#">
+                                <p>Skill 6</p>
+                            </div>
+                            <div class="tech-icon">
+                                <img src="images/Sample-icon.jpg" alt="#">
+                                <p>Skill 7</p>
+                            </div>
+                            <div class="tech-icon">
+                                <img src="images/Sample-icon.jpg" alt="#">
+                                <p>Skill 8</p>
+                            </div>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">Source Code</a>
+                            <a href="#" class="project-link">Live Demo</a>
+                            <a href="#" class="project-link">Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card">
+                    <a href="#" aria-label="See more about this project">
+                        <img src="images/Sample-thumbnail.jpg" alt="Thumbnail_of_project">
+                    </a>
+                    <div class="project-detail">
+                        <p class="project-title">Project3</p>
+                        <p class="project-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, error iure quam fugiat corporis amet libero! Et minima odit pariatur officiis porro optio esse, ullam fuga facilis quam iste ut!</p>
+                        <div class="tech-grid">
+                            <div class="tech-icon">
+                                <img src="images/Sample-icon.jpg" alt="#">
+                                <p>Skill 1</p>
+                            </div>
+                            <div class="tech-icon">
+                                <img src="images/Sample-icon.jpg" alt="#">
+                                <p>Skill 2</p>
+                            </div>
+                            <div class="tech-icon">
+                                <img src="images/Sample-icon.jpg" alt="#">
+                                <p>Skill 3</p>
+                            </div>
+                            <div class="tech-icon">
+                                <img src="images/Sample-icon.jpg" alt="#">
+                                <p>Skill 4</p>
+                            </div>
+                            <div class="tech-icon">
+                                <img src="images/Sample-icon.jpg" alt="#">
+                                <p>Skill 5</p>
+                            </div>
+                            <div class="tech-icon">
+                                <img src="images/Sample-icon.jpg" alt="#">
+                                <p>Skill 6</p>
+                            </div>
+                            <div class="tech-icon">
+                                <img src="images/Sample-icon.jpg" alt="#">
+                                <p>Skill 7</p>
+                            </div>
+                            <div class="tech-icon">
+                                <img src="images/Sample-icon.jpg" alt="#">
+                                <p>Skill 8</p>
+                            </div>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">Source Code</a>
+                            <a href="#" class="project-link">Live Demo</a>
+                            <a href="#" class="project-link">Details</a>
+                        </div>
+                    </div>
+                </div>
+                
+                
+            </div>
+        </main>
+        <footer id="contact">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="none" class="tabler-icon tabler-icon-mail-filled "><path d="M22 7.535v9.465a3 3 0 0 1 -2.824 2.995l-.176 .005h-14a3 3 0 0 1 -2.995 -2.824l-.005 -.176v-9.465l9.445 6.297l.116 .066a1 1 0 0 0 .878 0l.116 -.066l9.445 -6.297z"></path><path d="M19 4c1.08 0 2.027 .57 2.555 1.427l-9.555 6.37l-9.555 -6.37a2.999 2.999 0 0 1 2.354 -1.42l.201 -.007h14z"></path></svg>
+                <a href="yushoaoyama@gmail.com">yushoaoyama@gmail.com</a>
+            </div>
+        </footer>
+    </div>
+
+    <script src="/js/script.js"></script>
+</body>
+</html>
